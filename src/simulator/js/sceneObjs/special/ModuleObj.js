@@ -464,6 +464,9 @@ class ModuleObj extends BaseSceneObj {
     }
 
     fullParams['random'] = this.scene.rng;
+
+    const varParams = this.expandObject(this.moduleDef.vars, fullParams);
+    Object.assign(fullParams, varParams);
     
     this.error = null;
 
