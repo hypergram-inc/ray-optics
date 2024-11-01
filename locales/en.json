@@ -53,6 +53,9 @@
   "toolname_Mirror": {
     "message": "Mirror"
   },
+  "toolname_TiltedMirror": {
+    "message": "Mirror"
+  },
   "toolname_ArcMirror": {
     "message": "Mirror"
   },
@@ -193,6 +196,9 @@
   },
   "tool_Mirror": {
     "message": "Segment"
+  },
+  "tool_TiltedMirror": {
+    "message": "Tilted Mirror"
   },
   "tool_ArcMirror": {
     "message": "Circular Arc"

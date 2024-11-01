@@ -71,6 +71,10 @@
     "incomplete": true,
     "message": "Mirror"
   },
+  "toolname_TiltedMirror": {
+    "incomplete": true,
+    "message": "Mirror"
+  },
   "toolname_ArcMirror": {
     "incomplete": true,
     "message": "Mirror"
@@ -258,6 +262,10 @@
   "tool_Mirror": {
     "incomplete": true,
     "message": "Segment"
+  },
+  "tool_TiltedMirror": {
+    "incomplete": true,
+    "message": "Tilted Mirror"
   },
   "tool_ArcMirror": {
     "incomplete": true,
