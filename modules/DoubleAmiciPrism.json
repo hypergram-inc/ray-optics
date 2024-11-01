@@ -1,0 +1,116 @@
+{
+    "version": 5,
+    "modules": {
+      "Double Amici Prism": {
+        "numPoints": 2,
+        "params": [
+          "alpha1=0.0:0.1:90.0:30.0",
+          "alpha2=0.0:0.1:90.0:30.0",
+          "n1=0.5:0.1:2:1.5",
+          "n2=0.5:0.1:2:1.7"
+        ],
+        "vars": {
+          "height": "`sqrt((x_1 - x_2) ^ 2 + (y_1 - y_2) ^ 2)`",
+          "dir_x": "`x_2 - x_1`",
+          "dir_y": "`y_2 - y_1`",
+          "tan_x": "`-(y_2 - y_1)`",
+          "tan_y": "`x_2 - x_1`",
+          "alpha2_tan": "`tan(alpha2 * PI / 180 / 2)`",
+          "alpha1_tan": "`tan((alpha1 - alpha2 / 2) * PI / 180)`"
+        },
+        "objs": [
+          {
+            "type": "Glass",
+            "refIndex": "`n2`",
+            "path": [
+              {
+                "x": "`x_1`",
+                "y": "`y_1`",
+                "arc": false
+              },
+              {
+                "x": "`x_2 - tan_x * alpha2_tan`",
+                "y": "`y_2 - tan_y * alpha2_tan`",
+                "arc": false
+              },
+              {
+                "x": "`x_2 + tan_x * alpha2_tan`",
+                "y": "`y_2 + tan_y * alpha2_tan`",
+                "arc": false
+              }
+            ]
+          },
+          {
+            "type": "Glass",
+            "refIndex": "`n1`",
+            "path": [
+              {
+                "x": "`x_1`",
+                "y": "`y_1`",
+                "arc": false
+              },
+              {
+                "x": "`x_2 - tan_x * alpha2_tan`",
+                "y": "`y_2 - tan_y * alpha2_tan`",
+                "arc": false
+              },
+              {
+                "x": "`x_1 - tan_x * (alpha2_tan + alpha1_tan)`",
+                "y": "`y_1 - tan_y * (alpha2_tan + alpha1_tan)`",
+                "arc": false
+              }
+            ]
+          },
+          {
+            "type": "Glass",
+            "refIndex": "`n1`",
+            "path": [
+              {
+                "x": "`x_1`",
+                "y": "`y_1`",
+                "arc": false
+              },
+              {
+                "x": "`x_2 + tan_x * alpha2_tan`",
+                "y": "`y_2 + tan_y * alpha2_tan`",
+                "arc": false
+              },
+              {
+                "x": "`x_1 + tan_x * (alpha2_tan + alpha1_tan)`",
+                "y": "`y_1 + tan_y * (alpha2_tan + alpha1_tan)`",
+                "arc": false
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "objs": [
+      {
+        "type": "ModuleObj",
+        "module": "Double Amici Prism",
+        "points": [
+          {
+            "x": 640,
+            "y": 425
+          },
+          {
+            "x": 667,
+            "y": 229.4
+          }
+        ],
+        "params": {
+          "alpha1": 30,
+          "alpha2": 30,
+          "n1": 1.5,
+          "n2": 1.7
+        }
+      }
+    ],
+    "width": 1100,
+    "height": 900,
+    "origin": {
+      "x": 2,
+      "y": -1.3999999999999986
+    }
+  }
